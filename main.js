@@ -1,4 +1,11 @@
 import './style.css'
 
-let app = document.querySelector('#app');
-app.innerHTML = "<h1>Hello world!</h1>"
+import * as THREE from 'three';
+
+const scene = new THREE.Scene();
+
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+const renderer = new THREE.WebGLRenderer({
+  canvas: document.querySelector('#bg'),
+});
